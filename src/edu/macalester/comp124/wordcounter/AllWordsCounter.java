@@ -12,10 +12,15 @@ public class AllWordsCounter {
 
     public static final int MAX_WORDS = 10000;
 
+
+
 	// TODO: initialize instance variable to hold MAX_WORDS objects
-    SingleWordCounter counters[];
+    SingleWordCounter counters[] = new SingleWordCounter[MAX_WORDS];
 
     public int getNumWords() {
+        for (int i=0; i<; i++){
+            if ()
+        }
         // TODO: count the number of distinct words,
         // ie. the number of non-null counter objects.
         return -1;
@@ -30,8 +35,18 @@ public class AllWordsCounter {
 	public void count(String word) {
         int n = getNumWords();
         for (int i = 0; i < n; i++) {
+            if (counters[i].wordMatches(word)){
+                counters[i].incrementCount();
+            }
+
+
+
+
             // If you find the word increment the count and return
         }
+        counters[n]=new SingleWordCounter(word);
+        counters[n].incrementCount();
+
 
         // You didn't find the word. Add a new word counter to the array.
         // Don't forget to increment the word's count to get it to 1!
